@@ -25,9 +25,14 @@ nav .logo {
     display: flex;
     align-items: center;
     font-size: 24px;
-    color: azure;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     text-transform: uppercase;
+
+}
+
+nav .logo:hover {
+    color: rgb(255, 0, 0);
 }
 
 nav .list {
@@ -37,4 +42,53 @@ nav .list {
     margin: 0;
     width: 60%;
     height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav .list li {
+    list-style: none;
+
+
+}
+
+nav .list a {
+    display: block;
+    text-transform: uppercase;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+nav .list a:hover {
+    border-bottom: 4px solid rgb(76, 146, 207);
+
+}
+
+#toggle {
+    position: relative;
+    top: -100px;
+}
+
+nav .icon_barra {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+
+
+}
+
+nav.icon_barra {
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
 }
