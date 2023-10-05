@@ -1,10 +1,12 @@
-// Función que genera un elemento HTML reutilizable
-function generarElemento() {
-    var elemento = document.createElement('p');
-    elemento.textContent = 'Este es un elemento HTML reutilizable';
-    return elemento;
-}
+document.addEventListener("DOMContentLoaded", function () {
+    var toggleButton = document.getElementById("toggleButton");
+    var menuItems = document.getElementById("menuItems");
 
-
-var miElemento = generarElemento();
-document.body.appendChild(miElemento);
+    toggleButton.addEventListener("click", function () {
+        if (menuItems.style.display === "block") {
+            menuItems.style.display = "none";
+        } else {
+            menuItems.style.display = "block";
+        }
+    });
+});
