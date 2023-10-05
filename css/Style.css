@@ -20,8 +20,8 @@ nav {
 
 nav .logo {
     float: left;
-    width: 40%;
-    height: 100%;
+    width: 10%;
+    height: 80%;
     display: flex;
     align-items: center;
     font-size: 24px;
@@ -84,11 +84,51 @@ nav .icon_barra {
 
 }
 
-nav.icon_barra {
+nav.icon_barra .line {
     width: 30px;
     height: 5px;
     background-color: white;
     margin: 5px;
     border-radius: 3px;
     transition: all .3s ease-in-out;
+}
+
+@media(max-width:768px) {
+    nav .logo {
+        float: none;
+        width: auto;
+        justify-content: center;
+    }
+
+    nav .list {
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 100px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgba(0, 0, 0, 0.8);
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+    }
+
+    nav .list a {
+        font-size: 20px;
+
+    }
+
+    nav :checked~.list {
+        bottom: 0;
+    }
+
+    nav .icon_barra {
+        display: block;
+    }
+
+
 }
